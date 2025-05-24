@@ -1,7 +1,5 @@
 'use client'
 
-import React from 'react'
-
 interface ChixLogoProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   className?: string

@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import ChixLogo from '@/components/ChixLogo'
 
 export default function AboutPage() {

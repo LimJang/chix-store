@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { mockProducts, Product } from '@/lib/products'
 import Image from 'next/image'
 import { Plus, Edit, Trash2, Upload } from 'lucide-react'

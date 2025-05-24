@@ -1,6 +1,6 @@
 'use client'
 
-import React, { createContext, useContext, useReducer, useEffect } from 'react'
+import { createContext, useContext, useReducer, useEffect } from 'react'
 import { Product } from '@/lib/products'
 
 export interface CartItem extends Product {
