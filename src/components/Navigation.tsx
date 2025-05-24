@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import Link from 'next/link'
 import { ShoppingBag, User, Search } from 'lucide-react'
 import ChixLogo from './ChixLogo'

@@ -1,10 +1,10 @@
 'use client'
 
+import React, { useState } from 'react'
 import { useParams } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, Plus, Minus } from 'lucide-react'
-import { useState } from 'react'
 import { mockProducts } from '@/lib/products'
 import { useCart } from '@/context/CartContext'
 
