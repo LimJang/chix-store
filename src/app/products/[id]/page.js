@@ -8,6 +8,13 @@ import { ArrowLeft, Plus, Minus } from 'lucide-react'
 import { mockProducts } from '@/lib/products'
 import { useCart } from '@/context/CartContext'
 
+// Static generation을 위한 함수
+export async function generateStaticParams() {
+  return mockProducts.map((product) => ({
+    id: product.id.toString(),
+  }))
+}
+
 export default function ProductDetailPage() {
   const params = useParams()
   const productId = parseInt(params.id)
@@ -21,7 +28,7 @@ export default function ProductDetailPage() {
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="minimal-title text-2xl mb-4">PRODUCT NOT FOUND</h1>
-          <Link href="/products" className="minimal-text border border-white px-6 py-3 hover:bg-white hover:text-black transition-all duration-300">
+          <Link href="/products/" className="minimal-text border border-white px-6 py-3 hover:bg-white hover:text-black transition-all duration-300">
             BACK TO COLLECTION
           </Link>
         </div>
@@ -41,7 +48,7 @@ export default function ProductDetailPage() {
     <div className="min-h-screen bg-black text-white py-12">
       <div className="minimal-container">
         {/* Back Button */}
-        <Link href="/products" className="inline-flex items-center mb-8 minimal-text text-gray-400 hover:text-white transition-colors">
+        <Link href="/products/" className="inline-flex items-center mb-8 minimal-text text-gray-400 hover:text-white transition-colors">
           <ArrowLeft className="w-4 h-4 mr-2" />
           BACK TO COLLECTION
         </Link>

@@ -1,9 +1,6 @@
 'use client'
 
 import { createContext, useContext, useReducer, useEffect } from 'react'
-import { Product } from '@/lib/products'
-
-export const CartItem = Product
 
 const CartContext = createContext(undefined)
 
@@ -106,16 +103,19 @@ export function CartProvider({ children }) {
     dispatch({ type: 'CLEAR_CART' })
   }
 
-  return React.createElement(CartContext.Provider, {
-    value: {
-      ...state,
-      addToCart,
-      removeFromCart,
-      updateQuantity,
-      clearCart,
-    },
-    children
-  })
+  const contextValue = {
+    ...state,
+    addToCart,
+    removeFromCart,
+    updateQuantity,
+    clearCart,
+  }
+
+  return (
+    <CartContext.Provider value={contextValue}>
+      {children}
+    </CartContext.Provider>
+  )
 }
 
 export const useCart = () => {
