@@ -1,3 +1,5 @@
+'use client'
+
 import ChixLogo from '@/components/ChixLogo'
 
 export default function AboutPage() {
